@@ -1,0 +1,18 @@
+[project]
+name = "proxmox-mcp"
+version = "0.1.0"
+description = "Read-only PVE and PBS polling through MCP"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28,<1",
+    "mcp>=1.26,<2",
+]
+
+[project.scripts]
+proxmox-mcp = "proxmox_mcp.server:main"
+proxmox-mcp-client = "proxmox_mcp.client:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
